@@ -1,10 +1,9 @@
 # AwesomeBrowser
-AwesomeBrowser is a small web browser to showcase the power of GeckoView.
-It allows normal browsing, and includes [tracking protection](https://support.mozilla.org/en-US/kb/content-blocking) enabled by default.
-
-**Note:** When you run the app, be mindful of selecting the correct build variant according to your device's ABI.
+AwesomeBrowser is a small web browser to showcase the power of GeckoView.It allows normal browsing, and includes [tracking protection](https://support.mozilla.org/en-US/kb/content-blocking) enabled by default.
 
 <img src="https://github.com/Amejia481/AwesomeBrowser/raw/master/demo.gif" height="600em" />
+
+**Note:** When you run the app, be mindful of selecting the correct build variant according to your device's ABI.
 
 ## License
 
