@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Copyright (c) 2019 Razeware LLC
+  ~
+  ~  Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~  of this software and associated documentation files (the "Software"), to deal
+  ~  in the Software without restriction, including without limitation the rights
+  ~  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~  copies of the Software, and to permit persons to whom the Software is
+  ~  furnished to do so, subject to the following conditions:
+  ~
+  ~  The above copyright notice and this permission notice shall be included in
+  ~  all copies or substantial portions of the Software.
+  ~
+  ~  Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+  ~  distribute, sublicense, create a derivative work, and/or sell copies of the
+  ~  Software in any work that is designed, intended, or marketed for pedagogical or
+  ~  instructional purposes related to programming, coding, application development,
+  ~  or information technology.  Permission for such use, copying, modification,
+  ~  merger, publication, distribution, sublicensing, creation of derivative works,
+  ~  or sale is expressly withheld.
+  ~
+  ~  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~  THE SOFTWARE.
+  ~
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+        <EditText
+                android:id="@+id/location_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/location_hint"
+                android:importantForAutofill="no"
+                android:inputType="text|textUri"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ProgressBar
+            android:id="@+id/page_progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@id/toolbar"
+            android:progress="70"/>
+
+    <org.mozilla.geckoview.GeckoView xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:tools="http://schemas.android.com/tools"
+                                     android:id="@+id/geckoview"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:layout_below="@id/toolbar"
+                                     tools:context=".MainActivity"/>
+
+
+    <TextView
+            android:id="@+id/trackers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/geckoview"
+            android:layout_alignBottom="@id/geckoview"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle_background"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="0"
+    />
+
+</RelativeLayout>
