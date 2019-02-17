@@ -4,7 +4,7 @@ It allows normal browsing, and includes [tracking protection](https://support.mo
 
 **Note:** When you run the app, be mindful of selecting the correct build variant according to your device's ABI.
 
-<img src="demo.jpg" height="600em" />
+<img src="https://github.com/Amejia481/AwesomeBrowser/raw/master/demo.gif" height="600em" />
 
 ## License
 
