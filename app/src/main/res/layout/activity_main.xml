@@ -29,62 +29,9 @@
   ~  THE SOFTWARE.
   ~
   -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/main"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-    <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?android:actionBarSize">
-
-        <EditText
-                android:id="@+id/location_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:hint="@string/location_hint"
-                android:importantForAutofill="no"
-                android:inputType="text|textUri"
-                android:selectAllOnFocus="true"
-                android:singleLine="true"/>
-
-    </android.support.v7.widget.Toolbar>
-
-    <ProgressBar
-            android:id="@+id/page_progress"
-            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_alignBottom="@id/toolbar"
-            android:progress="70"/>
-
-    <org.mozilla.geckoview.GeckoView xmlns:android="http://schemas.android.com/apk/res/android"
-                                     xmlns:tools="http://schemas.android.com/tools"
-                                     android:id="@+id/geckoview"
-                                     android:layout_width="match_parent"
-                                     android:layout_height="match_parent"
-                                     android:layout_below="@id/toolbar"
-                                     tools:context=".MainActivity"/>
-
-
-    <TextView
-            android:id="@+id/trackers_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/geckoview"
-            android:layout_alignBottom="@id/geckoview"
-            android:layout_margin="10dp"
-            android:background="@drawable/circle_background"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            tools:text="0"
-    />
-
-</RelativeLayout>
+<org.mozilla.geckoview.GeckoView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/geckoview"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity"/>
